@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Matrix</title>
+    </head>
+    <body>
+        <nav>
+            <ul class="main_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page1.html">Questions</a></li>
+                <li><a href="page2.html">Answers</a></li>
+                <li><a href="page3.html">Conclusion</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1 class="matrix">
+                Ready to enter the matrix?
+            </h1>
+            <div class="matrix_options">
+                <a href="page1.html" class="button_matrix">Yes</a>
+                <button onclick="no_alert()" class="button_matrix" id="no">No</button>
+            </div>
+        </header>
+
+    </body>
+    <script>
+        function no_alert(){
+            alert("This option is not available!");
+        }
+    </script>
+</html>

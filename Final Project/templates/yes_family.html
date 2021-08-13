@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Members
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Members</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for username in members_list %}
+            <tr>
+                <td>{{username}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form action="/family" method="POST">
+        <button class="btn btn-danger" type="submit">Quit family</button>
+    </form>
+{% endblock %}

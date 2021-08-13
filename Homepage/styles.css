@@ -1,0 +1,68 @@
+body
+{
+    font-family:'Arial', sans-seriff;
+    background-color:#f3f3f3;
+}
+
+
+.matrix
+{
+    text-align:center;
+    background-color:#228b22;
+    line-height:100px;
+    color:white;
+    font-size:50px;
+}
+
+.matrix_options
+{
+    background-color:#2F4F4F;
+    text-align:center;
+
+}
+
+.button_matrix
+{
+  background-color: #2F4F4F;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  width:200px;
+}
+
+.button_matrix:hover
+{
+    background-color:#A9A9A9;
+}
+
+.main_menu
+{
+    text-align:center;
+    padding:5px 0 5px 0;
+    background-color: black;
+;
+}
+
+.main_menu li
+{
+    display:inline;
+}
+
+.main_menu a
+{
+   color:white;
+   text-decoration:none;
+   padding:8px;
+}
+
+.main_menu a:hover
+{
+    color:green;
+}

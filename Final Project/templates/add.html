@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="post">
+        <div class="form-group">
+            <input id="todo" autocomplete="off" autofocus class="form-control" name="todo" placeholder="Task" type="text" >
+        </div>
+        <button id="button1" class="btn btn-primary" type="submit" name="submit_u" value="submit_u">Add to you</button>
+        {% if familyID %}
+        <button id="button2" class="btn btn-primary" type="submit" name="submit_f" value="submit_f">Add to family</button>
+        {% endif %}
+    </form>
+    <script>
+        document.querySelector('#todo').onkeyup = function() {
+            if (document.querySelector('#todo').value === ''){
+                document.querySelector('#button1').disabled = true;
+                document.querySelector('#button2').disabled = true;
+            }
+            else {
+                document.querySelector('#button1').disabled = false;
+                document.querySelector('#button2').disabled = false;
+            }
+        }
+    </script>
+{% endblock %}

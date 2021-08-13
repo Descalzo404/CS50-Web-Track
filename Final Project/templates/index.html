@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tasks
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <thead>
+            <tr>
+                <th>Own tasks:</th>
+            </tr>
+        </thead>
+        {% if not todos %}
+        <div class="alert alert-info" role="alert">
+             No tasks currently
+        </div>
+        {% else %}
+        <ul class="list-group">
+            {% for todo in todos %}
+            <li class="list-group-item">{{todo[1]}} <a href="/delete/{{todo[0]}}">Done</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div>
+        <thead>
+            <tr>
+                <th>Tasks from family:</th>
+            </tr>
+        </thead>
+        {% if not f_todos %}
+        <div class="alert alert-info" role="alert">
+             No tasks currently
+        </div>
+        {% else %}
+        <ul class="list-group">
+            {% for todo in f_todos %}
+            <li class="list-group-item">{{todo[1]}} <a href="/deletef/{{todo[0]}}">Done</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+{% endblock %}

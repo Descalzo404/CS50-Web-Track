@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price($)</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(number_of_transactions) %}
+            <tr>
+                {% for j in range(4) %}
+                <td>{{transactions_list[i][j + 1]}}</td>
+                {% endfor %}
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

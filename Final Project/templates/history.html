@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    {% if not tasks %}
+    <div class="alert alert-info" role="alert">
+        History is empty.
+    </div>
+    {% else %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Task</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+            <tr>
+                <td>{{task["type"]}}</td>
+                <td>{{task["task"]}}</td>
+                <td>{{task["time"]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div><a class="btn btn-danger" href="/clear" role="button">Clear history</a></div>
+    {% endif %}
+{% endblock %}
